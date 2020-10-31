@@ -45,7 +45,7 @@ public class Juego {
 		
 		Respuesta r11 = new Respuesta ("José Calvo Sotero", false);
 		Respuesta r12 = new Respuesta ("Manuel Azaña", false);
-		Respuesta r13 = new Respuesta ("José Calvo Sotero", false);
+		Respuesta r13 = new Respuesta ("Felipe González", false);
 		Respuesta r14 = new Respuesta ("Adolfo Suarez", true);
 		
 		Respuesta r21 = new Respuesta ("Rastafari", true);

@@ -4,17 +4,12 @@ public class Respuesta {
 	private String textoRespuesta;
 	private boolean esCorrecta;
 	
-	public Respuesta(String texto) {
-		textoRespuesta = texto;
-		this.esCorrecta = false;		
-	}
-	
 	/**
 	 * Constructor de respuesta con dos parámetros.
 	 * @param texto (string) Texto con la respuesta correcta.
 	 * @param correcta	(bool) Estado de la respuesta correcta.
 	 */
-	public Respuesta (String texto, boolean correcta) {
+	public Respuesta (String texto, boolean correcta) {		//Inicializar correcta = true;
 		textoRespuesta = texto;
 		esCorrecta = correcta;
 	}
