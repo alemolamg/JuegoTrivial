@@ -124,9 +124,18 @@ public class Juego {
 		listaR8.add(new Respuesta("Noviembre", false));
 		
 		List<Respuesta> listaR9 = new ArrayList<Respuesta>();
+		listaR9.add(new Respuesta("Pest", false));
+		listaR9.add(new Respuesta("Danubio", true));
+		listaR9.add(new Respuesta("Volga",false));
+		listaR9.add(new Respuesta("Don", false));
 		
 		
 		List<Respuesta> listaR10 = new ArrayList<Respuesta>();
+		listaR10.add(new Respuesta("Cuadriceps", false));
+		listaR10.add(new Respuesta("Deltoides", false));
+		listaR10.add(new Respuesta("Biceps", false));
+		listaR10.add(new Respuesta("Lengua", true));		
+		
 		
 		todasLasPreguntas.add(new Pregunta ("¿ Quién fue el primer presidente de la "
 				+ "democracia española tras el franquismo?", listaR1));
@@ -138,10 +147,8 @@ public class Juego {
 		todasLasPreguntas.add(new Pregunta("¿Qué baile tiene su origen en un arte marcial?", listaR6));
 		todasLasPreguntas.add(new Pregunta("¿Dónde nació Arya Stark, de la saga \"Canción de hielo y Fuego\"?", listaR7));
 		todasLasPreguntas.add(new Pregunta("¿Qué mes tiene 31 días?", listaR8));
-		todasLasPreguntas.add(new Pregunta(texto, listaR9));
-		todasLasPreguntas.add(new Pregunta(texto, listaR10));
-		
-		
+		todasLasPreguntas.add(new Pregunta("¿Qué río divide en dos la ciudad de Budapest?", listaR9));
+		todasLasPreguntas.add(new Pregunta("¿Cuál es el músculo más fuerte del cuerpo humano?", listaR10));
 	}
 	
 	
