@@ -41,6 +41,5 @@ public class Respuesta {
 	public void setEsCorrecta(boolean esCorrecta) {
 		this.esCorrecta = esCorrecta;
 	}
-	
-	
+		
 }

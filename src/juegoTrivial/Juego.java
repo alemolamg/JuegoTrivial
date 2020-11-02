@@ -34,6 +34,8 @@ public class Juego {
 	}
 
 	public static void main(String[] args) {
+		int puntosPartida = 0, cantidad = 10;
+		int preFalladas = 0, preAcertadas = 0;
 		textoBienvenida();
 		
 		List<Pregunta> listaPreguntas = new ArrayList<Pregunta>();
@@ -43,7 +45,7 @@ public class Juego {
 		System.out.println("\n\n  Comenzamos con la ronda de preguntas:  ");
 		
 		for (Pregunta iterator : listaPreguntas ) {
-			
+			iterator.listaRespuestas.get(cantidad).;			
 		}
 		
 		
@@ -91,6 +93,13 @@ public class Juego {
 		listaR6.add(new Respuesta("Kathakali", false));
 		
 		
+		List<Respuesta> listaR7 = new ArrayList<Respuesta>();
+		listaR7.add(new Respuesta("Invernalia", true));			// desembarco del Rey  / 
+		listaR7.add(new Respuesta("Riverrun", false));
+		listaR7.add(new Respuesta("Desembarco del Rey", false));
+		listaR7.add(new Respuesta("OldTown", false));
+		
+		
 		todasLasPreguntas.add(new Pregunta ("¿ Quién fue el primer presidente de la "
 				+ "democracia española tras el franquismo?", listaR1));
 		todasLasPreguntas.add(new Pregunta("Para qué religión es especialmente importante el rey Haile Selassie I",listaR2));
@@ -99,6 +108,7 @@ public class Juego {
 		todasLasPreguntas.add(new Pregunta("¿Cómo se llamaba el caballo que pertenecía a "
 				+ "Don Quijote de La Mancha?", listaR5));
 		todasLasPreguntas.add(new Pregunta("¿Qué baile tiene su origen en un arte marcial?", listaR6));
+		todasLasPreguntas.add(new Pregunta("¿Dónde nació Arya Stark, de la saga \"Canción de hielo y Fuego\"?", listaR7));
 		
 		
 	}

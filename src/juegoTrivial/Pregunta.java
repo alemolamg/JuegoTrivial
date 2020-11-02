@@ -13,6 +13,19 @@ public class Pregunta {
 		listaRespuestas = respuestasPregunta;		
 	}
 	
+	public void mostrarPregunta() {
+		System.out.println(textoPregunta);
+	}
+	
+	/**
+	 * Muestra por pantalla las 4 respuestas.
+	 */
+	public void mostrarRespuestas() {
+		for (int i = 0; i < this.listaRespuestas.size(); i++) 
+			System.out.println(this.listaRespuestas.get(i).getTextoRespuesta());
+	}
+	
+	
 	
 
 }
