@@ -22,7 +22,7 @@ public class Pregunta {
 	 */
 	public void mostrarRespuestas() {
 		for (int i = 0; i < this.listaRespuestas.size(); i++) 
-			System.out.println(this.listaRespuestas.get(i).getTextoRespuesta());
+			System.out.println(i +") " + this.listaRespuestas.get(i).getTextoRespuesta());
 	}
 	
 	

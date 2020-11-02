@@ -3,11 +3,15 @@ package juegoTrivial;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
 
 import juegoTrivial.Pregunta;
 
 public class Juego {
+	public static int puntosPartida = 0, cantidad = 10;
+	public static int preFalladas = 0, preAcertadas = 0;
 	
+//	public List<Pregunta> listaPreguntas = new ArrayList<Pregunta>();
 	
 	public static void textoBienvenida() {
 		System.out.println(""
@@ -34,8 +38,6 @@ public class Juego {
 	}
 
 	public static void main(String[] args) {
-		int puntosPartida = 0, cantidad = 10;
-		int preFalladas = 0, preAcertadas = 0;
 		textoBienvenida();
 		
 		List<Pregunta> listaPreguntas = new ArrayList<Pregunta>();
@@ -44,14 +46,29 @@ public class Juego {
 		
 		System.out.println("\n\n  Comenzamos con la ronda de preguntas:  ");
 		
-//		for (Pregunta iterator : listaPreguntas ) {
-//			iterator.listaRespuestas.get(cantidad).;			
-//		}
+		for (int i = 0; i < listaPreguntas.size(); i++) {
+			listaPreguntas.get(i).mostrarPregunta();
+			listaPreguntas.get(i).mostrarRespuestas();
+			boolean laRespuesta = verificarRespuesta(listaPreguntas, i);
+			if (laRespuesta) {
+				System.out.println("La respuesta es correcta.");
+				preAcertadas++;
+			}else {
+				System.out.println("La respuesta es incorrecta");
+				preFalladas++;
+			}
+			
+			System.out.println("\n Siguiente pregunta: ");
+		}
+		
 		
 		
 	}
 	
-	
+	/**
+	 * rellena el vector con las preguntas deseadas 
+	 * @param todasLasPreguntas	(list<Pregunta>) entra vacío y se le añaden las preguntas.
+	 */
 	public static void crearPreguntas(List<Pregunta> todasLasPreguntas) {
 				
 		List<Respuesta> listaR1 = new ArrayList<Respuesta>();
@@ -119,6 +136,28 @@ public class Juego {
 		todasLasPreguntas.add(new Pregunta("¿Qué mes tiene 31 días?", listaR8));
 		
 		
+	}
+	
+	
+	public static boolean verificarRespuesta (List<Pregunta> listPreguntas, int numPregunta) {
+		System.out.println("Elige la respuesta correcta: ");
+		int lectura = obtenerEnteroScanner();
+		boolean wanda = false;
+		
+		for (int i = 0; i < listPreguntas.get(numPregunta).listaRespuestas.size(); i++ ) 
+			if(lectura == i)
+				wanda = listPreguntas.get(numPregunta).listaRespuestas.get(i).isEsCorrecta();
+		return wanda;		
+	}
+	
+	
+	/**
+	 * Usa el método Scanner para obtener el entero
+	 * @return int
+	 */
+	public static int obtenerEnteroScanner() {
+		Scanner sc = new Scanner(System.in);
+		return sc.nextInt();
 	}
 		
 }
