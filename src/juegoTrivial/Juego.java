@@ -57,12 +57,12 @@ public class Juego {
 				System.out.println("La respuesta es incorrecta");
 				preFalladas++;
 			}
-			
-			System.out.println("\n Siguiente pregunta: ");
 		}
 		
+		int puntuacionTotal = (10 * preAcertadas) - (5 * preFalladas);
 		
-		
+		System.out.println("Se han acertado " + preAcertadas + " preguntas y fallado " + preFalladas);
+		System.out.println("La puntuación total es: " + puntuacionTotal);		
 	}
 	
 	/**
@@ -123,6 +123,10 @@ public class Juego {
 		listaR8.add(new Respuesta("Agosto", true));
 		listaR8.add(new Respuesta("Noviembre", false));
 		
+		List<Respuesta> listaR9 = new ArrayList<Respuesta>();
+		
+		
+		List<Respuesta> listaR10 = new ArrayList<Respuesta>();
 		
 		todasLasPreguntas.add(new Pregunta ("¿ Quién fue el primer presidente de la "
 				+ "democracia española tras el franquismo?", listaR1));
@@ -134,6 +138,8 @@ public class Juego {
 		todasLasPreguntas.add(new Pregunta("¿Qué baile tiene su origen en un arte marcial?", listaR6));
 		todasLasPreguntas.add(new Pregunta("¿Dónde nació Arya Stark, de la saga \"Canción de hielo y Fuego\"?", listaR7));
 		todasLasPreguntas.add(new Pregunta("¿Qué mes tiene 31 días?", listaR8));
+		todasLasPreguntas.add(new Pregunta(texto, listaR9));
+		todasLasPreguntas.add(new Pregunta(texto, listaR10));
 		
 		
 	}
