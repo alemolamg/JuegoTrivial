@@ -33,7 +33,6 @@ public class Juego {
 		textoBienvenida();
 		
 		
-		
 	}
 	
 	
