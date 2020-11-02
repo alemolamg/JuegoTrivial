@@ -44,9 +44,9 @@ public class Juego {
 		
 		System.out.println("\n\n  Comenzamos con la ronda de preguntas:  ");
 		
-		for (Pregunta iterator : listaPreguntas ) {
-			iterator.listaRespuestas.get(cantidad).;			
-		}
+//		for (Pregunta iterator : listaPreguntas ) {
+//			iterator.listaRespuestas.get(cantidad).;			
+//		}
 		
 		
 	}
@@ -100,6 +100,13 @@ public class Juego {
 		listaR7.add(new Respuesta("OldTown", false));
 		
 		
+		List<Respuesta> listaR8 = new ArrayList<Respuesta>();
+		listaR8.add(new Respuesta("Febrero", false));
+		listaR8.add(new Respuesta("Junio", false));
+		listaR8.add(new Respuesta("Agosto", true));
+		listaR8.add(new Respuesta("Noviembre", false));
+		
+		
 		todasLasPreguntas.add(new Pregunta ("¿ Quién fue el primer presidente de la "
 				+ "democracia española tras el franquismo?", listaR1));
 		todasLasPreguntas.add(new Pregunta("Para qué religión es especialmente importante el rey Haile Selassie I",listaR2));
@@ -109,6 +116,7 @@ public class Juego {
 				+ "Don Quijote de La Mancha?", listaR5));
 		todasLasPreguntas.add(new Pregunta("¿Qué baile tiene su origen en un arte marcial?", listaR6));
 		todasLasPreguntas.add(new Pregunta("¿Dónde nació Arya Stark, de la saga \"Canción de hielo y Fuego\"?", listaR7));
+		todasLasPreguntas.add(new Pregunta("¿Qué mes tiene 31 días?", listaR8));
 		
 		
 	}
