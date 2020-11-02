@@ -111,7 +111,7 @@ public class Juego {
 		
 		
 		List<Respuesta> listaR7 = new ArrayList<Respuesta>();
-		listaR7.add(new Respuesta("Invernalia", true));			// desembarco del Rey  / 
+		listaR7.add(new Respuesta("Invernalia", true));			
 		listaR7.add(new Respuesta("Riverrun", false));
 		listaR7.add(new Respuesta("Desembarco del Rey", false));
 		listaR7.add(new Respuesta("OldTown", false));
